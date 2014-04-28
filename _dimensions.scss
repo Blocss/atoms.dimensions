@@ -1,4 +1,4 @@
-/*! blocss-dimensions v1.0.0 | MIT License | github.com/Blocss */
+/*! blocss-dimensions v1.0.1 | MIT License | github.com/Blocss */
 
 /*----------------------------------------------------------------------------*\
     $DIMENSIONS
@@ -146,6 +146,9 @@ $name-pull:                 pull                            !default;
     @if $prefix == $name-units {
         .#{$prefix}-1-1#{$modifier} {
             width: 100%;
+        }
+        .#{$prefix}-auto#{$modifier} {
+            width: auto;
         }
     } @else if $prefix == $name-push {
         .#{$prefix}-0-0#{$modifier} {
