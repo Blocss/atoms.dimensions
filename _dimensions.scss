@@ -147,6 +147,9 @@ $name-pull:                 pull                            !default;
         .#{$prefix}-1-1#{$modifier} {
             width: 100%;
         }
+        .#{$prefix}-auto#{$modifier} {
+            width: auto;
+        }
     } @else if $prefix == $name-push {
         .#{$prefix}-0-0#{$modifier} {
             left: 0;
