@@ -1,4 +1,4 @@
-/*! blocss-dimensions v1.0.1 | MIT License | github.com/Blocss */
+/*! blocss-dimensions v1.0.2 | MIT License | github.com/Blocss */
 
 /*----------------------------------------------------------------------------*\
     $DIMENSIONS
@@ -64,10 +64,10 @@ $name-pull:                 pull                            !default;
 }
 
 
-/**
- * Check if a list contains a value
- */
 @function contains($list, $value) {
+    /**
+     * Check if a list contains a value
+     */
     @if type-of($list) == list { @return not not index($list, $value); }
     @else { @return $list == $value; }
 }
