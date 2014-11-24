@@ -1,5 +1,9 @@
 == HEAD
 
+== 1.0.2 (Nov 24, 2014)
+
+* Make the comonent work with libsass
+
 == 1.0.1 (Apr 28, 2014)
 
 * Added auto modifier
