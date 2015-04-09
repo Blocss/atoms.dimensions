@@ -1,5 +1,22 @@
 {
     "name": "blocss-dimensions",
-    "version": "1.0.2",
-    "main": "_dimensions.scss"
+    "version": "1.1.0",
+    "homepage": "https://github.com/Blocss/atoms.dimensions",
+    "authors": [
+        "Bram Smulders <bram@bramsmulders.com>"
+    ],
+    "description": "Sizes in human readable format.",
+    "main": "_atoms.dimensions.scss",
+    "keywords": [
+        "blocss",
+        "oocss",
+        "atomic design",
+        "css",
+        "dimensions"
+    ],
+    "license": "MIT",
+    "dependencies": {
+        "blocss-defaults": "~1.0.0",
+        "blocss-mixins": "~1.0.0"
+    }
 }
