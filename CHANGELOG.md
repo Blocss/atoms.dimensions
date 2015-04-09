@@ -1,5 +1,9 @@
 == HEAD
 
+== 1.1.0 (Apr 9, 2015)
+
+* Comply with new blocss
+
 == 1.0.2 (Nov 24, 2014)
 
 * Make the comonent work with libsass
