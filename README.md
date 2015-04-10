@@ -1,4 +1,4 @@
-# Blocss Dimensions – v1.1.0
+# Blocss Dimensions – v1.1.1
 
 A [Blocss](https://github.com/Blocss/blocss/) collection of utility classes for low-level CSS dimensions.
 
@@ -6,9 +6,7 @@ Read more about [Blocss](https://blocss.github.io/blocss).
 
 ## Installation
 
-* [Bower](http://bower.io/): `bower install --save blocss-dimensions`
-* Download: [zip](https://github.com/Blocss/dimensions/zipball/master)
-* Git: `git clone https://github.com/Blocss/dimensions`
+    $ bower install --save blocss-dimensions
 
 ## Available classes
 Note: these are defaults, you can alter the names with variables
