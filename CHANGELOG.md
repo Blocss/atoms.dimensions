@@ -1,5 +1,9 @@
 == HEAD
 
+== 1.1.1 (Apr 10, 2015)
+
+* Update readme
+
 == 1.1.0 (Apr 9, 2015)
 
 * Comply with new blocss
