@@ -116,16 +116,9 @@ $name-pull:                 pull                            !default;
              * Create units based on fractions
              */
             .#{$prefix}-#{$i}-#{$n}#{$modifier} {
-                /**
-                 * If this unit can be reduced then extend the previous rule
-                 */
                 @if $i-r and $canreduce {
                     @extend .#{$prefix}-#{$i-r}-#{$n-r}#{$modifier};
-                }
-                /**
-                 * Otherwise create a new % width
-                 */
-                @else {
+                } @else {
                     @if $prefix == $name-units {
                         width: percentage($i / $n);
                     } @else if $prefix == $name-push {
