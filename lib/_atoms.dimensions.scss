@@ -1,4 +1,4 @@
-/*! blocss-dimensions v1.1.1 | MIT License | github.com/Blocss */
+/*! blocss-dimensions v1.1.2 | MIT License | github.com/Blocss */
 
 /*----------------------------------------------------------------------------*\
     $DIMENSIONS
@@ -127,11 +127,7 @@ $blocss-name-pull: pull !default;
                  */
                 @if $i-r and $canreduce {
                     @extend .#{$blocss-grid-namespace}#{$prefix}-#{$i-r}-#{$n-r}#{$modifier};
-                }
-                /**
-                 * Otherwise create a new % width
-                 */
-                @else {
+                } @else {
                     @if $prefix == $blocss-name-units {
                         width: percentage($i / $n);
                     } @else if $prefix == $blocss-name-push {

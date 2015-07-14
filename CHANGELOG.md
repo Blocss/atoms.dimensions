@@ -1,5 +1,9 @@
 == HEAD
 
+== 1.1.2 (Jul 14, 2015)
+
+* Fixed component work with libsass
+
 == 1.1.1 (Apr 10, 2015)
 
 * Update readme
