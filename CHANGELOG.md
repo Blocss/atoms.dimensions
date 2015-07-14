@@ -1,5 +1,9 @@
 == HEAD
 
+== 1.0.3 (Jul 14, 2015)
+
+* New verion of libsass
+
 == 1.0.2 (Nov 24, 2014)
 
 * Make the comonent work with libsass
