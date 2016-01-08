@@ -1,4 +1,4 @@
-/*! blocss-dimensions v1.1.2 | MIT License | github.com/Blocss */
+/*! blocss-dimensions v1.1.3 | MIT License | github.com/Blocss */
 
 /*----------------------------------------------------------------------------*\
     $DIMENSIONS
@@ -121,12 +121,12 @@ $blocss-name-pull: pull !default;
             /**
              * Create units based on fractions
              */
-            .#{$blocss-grid-namespace}#{$prefix}-#{$i}-#{$n}#{$modifier} {
+            .#{$blocss-dimensions-namespace}#{$prefix}-#{$i}-#{$n}#{$modifier} {
                 /**
                  * If this unit can be reduced then extend the previous rule
                  */
                 @if $i-r and $canreduce {
-                    @extend .#{$blocss-grid-namespace}#{$prefix}-#{$i-r}-#{$n-r}#{$modifier};
+                    @extend .#{$blocss-dimensions-namespace}#{$prefix}-#{$i-r}-#{$n-r}#{$modifier};
                 } @else {
                     @if $prefix == $blocss-name-units {
                         width: percentage($i / $n);
@@ -146,18 +146,18 @@ $blocss-name-pull: pull !default;
      * Reset dimensions
      */
     @if $prefix == $blocss-name-units {
-        .#{$blocss-grid-namespace}#{$prefix}-1-1#{$modifier} {
+        .#{$blocss-dimensions-namespace}#{$prefix}-1-1#{$modifier} {
             width: 100%;
         }
-        .#{$blocss-grid-namespace}#{$prefix}-auto#{$modifier} {
+        .#{$blocss-dimensions-namespace}#{$prefix}-auto#{$modifier} {
             width: auto;
         }
     } @else if $prefix == $blocss-name-push {
-        .#{$blocss-grid-namespace}#{$prefix}-0-0#{$modifier} {
+        .#{$blocss-dimensions-namespace}#{$prefix}-0-0#{$modifier} {
             left: 0;
         }
     } @else if $prefix == $blocss-name-pull {
-        .#{$blocss-grid-namespace}#{$prefix}-0-0#{$modifier} {
+        .#{$blocss-dimensions-namespace}#{$prefix}-0-0#{$modifier} {
             right: 0;
         }
     }
@@ -180,7 +180,7 @@ $blocss-name-pull: pull !default;
   * Setup generic push
   */
 @if $blocss-use-push == true {
-    [class*="#{$blocss-grid-namespace}#{$blocss-name-push}-"] {
+    [class*="#{$blocss-dimensions-namespace}#{$blocss-name-push}-"] {
         position:relative;
     }
     @include dimensions-build($blocss-divisions, $blocss-name-push);
@@ -191,7 +191,7 @@ $blocss-name-pull: pull !default;
   * Setup generic pull
   */
 @if $blocss-use-pull == true {
-    [class*="#{$blocss-grid-namespace}#{$blocss-name-pull}-"] {
+    [class*="#{$blocss-dimensions-namespace}#{$blocss-name-pull}-"] {
         position:relative;
     }
     @include dimensions-build($blocss-divisions, $blocss-name-pull);
