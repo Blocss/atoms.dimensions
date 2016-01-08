@@ -1,5 +1,9 @@
 == HEAD
 
+== 1.1.3 (Jan 08, 2016)
+
+* Correct use of namespace variable
+
 == 1.1.2 (Jul 14, 2015)
 
 * Fixed component work with libsass
