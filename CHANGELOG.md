@@ -1,6 +1,6 @@
 == HEAD
 
-== 1.1.4 (Jan 27, 2016)
+== 1.1.5.1 (Jan 27, 2016)
 
 * Added responsive modifiers
 
