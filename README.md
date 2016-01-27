@@ -1,4 +1,4 @@
-# Blocss Dimensions – v1.1.3
+# Blocss Dimensions – v1.1.4
 
 A [Blocss](https://github.com/Blocss/blocss/) collection of utility classes for low-level CSS dimensions.
 
@@ -22,6 +22,7 @@ For example, `2 4 6 12` will let you use the `.u-1-2`, `.u-2-4`, `.u-3-6`, and
 ## Available settings
 
 * `$blocss-dimensions-namespace` - Prefixes classes with a namespace, defaults to `$blocss-namespace`
+* `$blocss-dimensions-responsive-modifier` - Prefixes classes with a namespace, defaults to `$blocss-responsive-modifier`
 * `$blocss-use-units` - enables/disables unit generation, defaults to `true`
 * `$blocss-use-push` - enables/disables push generation, defaults to `false`
 * `$blocss-use-pull` - enables/disables pull generation, defaults to `false`

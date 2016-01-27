@@ -1,5 +1,9 @@
 == HEAD
 
+== 1.1.4 (Jan 27, 2016)
+
+* Added responsive modifiers
+
 == 1.1.3 (Jan 08, 2016)
 
 * Correct use of namespace variable
