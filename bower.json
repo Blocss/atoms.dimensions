@@ -16,7 +16,7 @@
     ],
     "license": "MIT",
     "dependencies": {
-        "blocss-defaults": "~1.0.0",
+        "blocss-defaults": "~1.0.1",
         "blocss-mixins": "~1.0.0"
     }
 }
