@@ -20,9 +20,9 @@ $blocss-dimensions-responsive-modifier: $blocss-responsive-modifier !default;
 /**
  * Flags to enable or disable dimension traits
  */
-$blocss-use-units: true !default;
-$blocss-use-push: false !default;
-$blocss-use-pull: false !default;
+$blocss-dimensions-use-units: true !default;
+$blocss-dimensions-use-push: false !default;
+$blocss-dimensions-use-pull: false !default;
 
 /**
  * Divisions, makes it easy to create several proportional
@@ -32,7 +32,7 @@ $blocss-use-pull: false !default;
  * unit-3-6, and unit-6-12 classes to specify that an element should
  * take up 50% of its container.
  */
-$blocss-divisions: 12 !default;
+$blocss-dimensions-divisions: 12 !default;
 
 /**
  * Define which namespaced breakpoints you would like to generate for each
@@ -46,16 +46,16 @@ $blocss-divisions: 12 !default;
  * Note: the name of the breakpoint must exist in the list of `$breakpoints`
  *       in the Blocss base repository
  */
-$blocss-breakpoint-has-units: () !default;
-$blocss-breakpoint-has-push: () !default;
-$blocss-breakpoint-has-pull: () !default;
+$blocss-dimensions-breakpoint-has-units: () !default;
+$blocss-dimensions-breakpoint-has-push: () !default;
+$blocss-dimensions-breakpoint-has-pull: () !default;
 
 /**
  * You can rename the dimension prefixes to your liking
  */
-$blocss-name-units: u !default;
-$blocss-name-push: push !default;
-$blocss-name-pull: pull !default;
+$blocss-dimensions-name-units: unit !default;
+$blocss-dimensions-name-push: push !default;
+$blocss-dimensions-name-pull: pull !default;
 
 
 
@@ -86,7 +86,7 @@ $blocss-name-pull: pull !default;
  * Optionally provide a modifier suffix that can be used to adjust
  * grids in different contexts (e.g. viewport dimensions).
  */
-@mixin dimensions-build($units, $prefix: $blocss-name-units, $modifier: '') {
+@mixin dimensions-build($units, $prefix: $blocss-dimensions-name-units, $modifier: '') {
 
     /**
      * Proportional units
@@ -129,11 +129,11 @@ $blocss-name-pull: pull !default;
                 @if $i-r and $canreduce {
                     @extend .#{$blocss-dimensions-namespace}#{$prefix}-#{$i-r}-#{$n-r}#{$modifier};
                 } @else {
-                    @if $prefix == $blocss-name-units {
+                    @if $prefix == $blocss-dimensions-name-units {
                         width: percentage($i / $n);
-                    } @else if $prefix == $blocss-name-push {
+                    } @else if $prefix == $blocss-dimensions-name-push {
                         left: percentage($i / $n);
-                    } @else if $prefix == $blocss-name-pull {
+                    } @else if $prefix == $blocss-dimensions-name-pull {
                         right: percentage($i / $n);
                     }
                 }
@@ -146,18 +146,18 @@ $blocss-name-pull: pull !default;
     /**
      * Reset dimensions
      */
-    @if $prefix == $blocss-name-units {
+    @if $prefix == $blocss-dimensions-name-units {
         .#{$blocss-dimensions-namespace}#{$prefix}-1-1#{$modifier} {
             width: 100%;
         }
         .#{$blocss-dimensions-namespace}#{$prefix}-auto#{$modifier} {
             width: auto;
         }
-    } @else if $prefix == $blocss-name-push {
+    } @else if $prefix == $blocss-dimensions-name-push {
         .#{$blocss-dimensions-namespace}#{$prefix}-0-0#{$modifier} {
             left: 0;
         }
-    } @else if $prefix == $blocss-name-pull {
+    } @else if $prefix == $blocss-dimensions-name-pull {
         .#{$blocss-dimensions-namespace}#{$prefix}-0-0#{$modifier} {
             right: 0;
         }
@@ -172,30 +172,30 @@ $blocss-name-pull: pull !default;
 /**
  * Setup generic widths
  */
-@if $blocss-use-units == true {
-    @include dimensions-build($blocss-divisions);
+@if $blocss-dimensions-use-units == true {
+    @include dimensions-build($blocss-dimensions-divisions);
 }
 
 
 /**
   * Setup generic push
   */
-@if $blocss-use-push == true {
-    [class*="#{$blocss-dimensions-namespace}#{$blocss-name-push}-"] {
+@if $blocss-dimensions-use-push == true {
+    [class*="#{$blocss-dimensions-namespace}#{$blocss-dimensions-name-push}-"] {
         position:relative;
     }
-    @include dimensions-build($blocss-divisions, $blocss-name-push);
+    @include dimensions-build($blocss-dimensions-divisions, $blocss-dimensions-name-push);
 }
 
 
 /**
   * Setup generic pull
   */
-@if $blocss-use-pull == true {
-    [class*="#{$blocss-dimensions-namespace}#{$blocss-name-pull}-"] {
+@if $blocss-dimensions-use-pull == true {
+    [class*="#{$blocss-dimensions-namespace}#{$blocss-dimensions-name-pull}-"] {
         position:relative;
     }
-    @include dimensions-build($blocss-divisions, $blocss-name-pull);
+    @include dimensions-build($blocss-dimensions-divisions, $blocss-dimensions-name-pull);
 }
 
 
@@ -203,26 +203,26 @@ $blocss-name-pull: pull !default;
 /*  Responsive
 \*----------------------------------------------------------------------------*/
 
-@if $blocss-use-units == true {
-    @each $name in $blocss-breakpoint-has-units {
+@if $blocss-dimensions-use-units == true {
+    @each $name in $blocss-dimensions-breakpoint-has-units {
         @include media-query($name) {
-           @include dimensions-build($blocss-divisions, $blocss-name-units, '#{$blocss-dimensions-responsive-modifier}#{$name}');
+           @include dimensions-build($blocss-dimensions-divisions, $blocss-dimensions-name-units, '#{$blocss-dimensions-responsive-modifier}#{$name}');
         }
     }
 }
 
-@if $blocss-use-push == true {
-    @each $name in $blocss-breakpoint-has-push {
+@if $blocss-dimensions-use-push == true {
+    @each $name in $blocss-dimensions-breakpoint-has-push {
         @include media-query($name) {
-           @include dimensions-build($blocss-divisions, $blocss-name-push, '#{$blocss-dimensions-responsive-modifier}#{$name}');
+           @include dimensions-build($blocss-dimensions-divisions, $blocss-dimensions-name-push, '#{$blocss-dimensions-responsive-modifier}#{$name}');
         }
     }
 }
 
-@if $blocss-use-pull == true {
-    @each $name in $blocss-breakpoint-has-pull {
+@if $blocss-dimensions-use-pull == true {
+    @each $name in $blocss-dimensions-breakpoint-has-pull {
         @include media-query($name) {
-           @include dimensions-build($blocss-divisions, $blocss-name-pull, '#{$blocss-dimensions-responsive-modifier}#{$name}');
+           @include dimensions-build($blocss-dimensions-divisions, $blocss-dimensions-name-pull, '#{$blocss-dimensions-responsive-modifier}#{$name}');
         }
     }
 }
