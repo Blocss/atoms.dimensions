@@ -23,6 +23,7 @@ $blocss-dimensions-responsive-modifier: $blocss-responsive-modifier !default;
 $blocss-dimensions-use-units: true !default;
 $blocss-dimensions-use-push: false !default;
 $blocss-dimensions-use-pull: false !default;
+$blocss-dimensions-use-flexbox: $blocss-use-flexbox !default;
 
 /**
  * Divisions, makes it easy to create several proportional
@@ -125,16 +126,20 @@ $blocss-dimensions-name-pull: pull !default;
             .#{$blocss-dimensions-namespace}#{$prefix}-#{$i}-#{$n}#{$modifier} {
                 /**
                  * If this unit can be reduced then extend the previous rule
+                 * 1. Use `flex-basis: auto` with a width to avoid box-sizing bug in IE10/11
                  */
                 @if $i-r and $canreduce {
                     @extend .#{$blocss-dimensions-namespace}#{$prefix}-#{$i-r}-#{$n-r}#{$modifier};
                 } @else {
                     @if $prefix == $blocss-dimensions-name-units {
-                        width: percentage($i / $n);
+                        @if $blocss-use-flexbox == true {
+                            flex-basis: auto !important; /* [1] */
+                        }
+                        width: percentage($i / $n) !default;
                     } @else if $prefix == $blocss-dimensions-name-push {
-                        left: percentage($i / $n);
+                        left: percentage($i / $n) !default;
                     } @else if $prefix == $blocss-dimensions-name-pull {
-                        right: percentage($i / $n);
+                        right: percentage($i / $n) !default;
                     }
                 }
             }
@@ -145,21 +150,28 @@ $blocss-dimensions-name-pull: pull !default;
 
     /**
      * Reset dimensions
+     * 1. Use `flex-basis: auto` with a width to avoid box-sizing bug in IE10/11
      */
     @if $prefix == $blocss-dimensions-name-units {
         .#{$blocss-dimensions-namespace}#{$prefix}-1-1#{$modifier} {
-            width: 100%;
+            @if $blocss-use-flexbox == true {
+                flex-basis: auto !important; /* [1] */
+            }
+            width: 100% !important;
         }
         .#{$blocss-dimensions-namespace}#{$prefix}-auto#{$modifier} {
-            width: auto;
+            @if $blocss-use-flexbox == true {
+                flex-basis: auto !important; /* [1] */
+            }
+            width: auto !important;
         }
     } @else if $prefix == $blocss-dimensions-name-push {
         .#{$blocss-dimensions-namespace}#{$prefix}-0-0#{$modifier} {
-            left: 0;
+            left: 0 !important;
         }
     } @else if $prefix == $blocss-dimensions-name-pull {
         .#{$blocss-dimensions-namespace}#{$prefix}-0-0#{$modifier} {
-            right: 0;
+            right: 0 !important;
         }
     }
 }
