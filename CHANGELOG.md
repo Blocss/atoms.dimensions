@@ -1,5 +1,11 @@
 == HEAD
 
+== 1.2.0 (Jul 19, 2016)
+
+* Explicitly namespace variables to `$blocss-dimensions-X`
+* Forced immutability by adding `!important` to every rule
+* Added flexbox mode for the module to be used in flexbox based grids
+
 == 1.1.5.1 (Jan 27, 2016)
 
 * Added responsive modifiers
