@@ -1,5 +1,9 @@
 == HEAD
 
+== 1.2.1 (Jul 19, 2016)
+
+* fixed error with `!default`
+
 == 1.2.0 (Jul 19, 2016)
 
 * Explicitly namespace variables to `$blocss-dimensions-X`

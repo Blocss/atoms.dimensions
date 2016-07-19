@@ -1,4 +1,4 @@
-# Blocss Dimensions – v1.2.0
+# Blocss Dimensions – v1.2.1
 
 A [Blocss](https://github.com/Blocss/blocss/) collection of utility classes for low-level CSS dimensions.
 
