@@ -1,4 +1,4 @@
-# Blocss Dimensions – v1.1.5.1
+# Blocss Dimensions – v1.2.0
 
 A [Blocss](https://github.com/Blocss/blocss/) collection of utility classes for low-level CSS dimensions.
 
@@ -15,9 +15,9 @@ Note: these are defaults, you can alter the names with variables
 * `.push-x-x`: Pushes an element to the right
 * `.pull-x-x`: Pulls an element to the left
 
-You can alter the `$blocss-divisions` variable to create several proportional divisions.
-For example, `2 4 6 12` will let you use the `.u-1-2`, `.u-2-4`, `.u-3-6`, and
-`.u-6-12` classes to specify that an element should take up 50% of its container.
+You can alter the `$blocss-dimensions-divisions` variable to create several proportional divisions.
+For example, `2 4 6 12` will let you use the `.unit-1-2`, `.unit-2-4`, `.unit-3-6`, and
+`.unit-6-12` classes to specify that an element should take up 50% of its container.
 
 ## Available settings
 
