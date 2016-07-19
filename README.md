@@ -11,7 +11,7 @@ Read more about [Blocss](https://blocss.github.io/blocss).
 ## Available classes
 Note: these are defaults, you can alter the names with variables
 
-* `.u-x-x`: Gives an element width
+* `.unit-x-x`: Gives an element width
 * `.push-x-x`: Pushes an element to the right
 * `.pull-x-x`: Pulls an element to the left
 
@@ -23,16 +23,16 @@ For example, `2 4 6 12` will let you use the `.u-1-2`, `.u-2-4`, `.u-3-6`, and
 
 * `$blocss-dimensions-namespace` - Prefixes classes with a namespace, defaults to `$blocss-namespace`
 * `$blocss-dimensions-responsive-modifier` - Prefixes classes with a namespace, defaults to `$blocss-responsive-modifier`
-* `$blocss-use-units` - enables/disables unit generation, defaults to `true`
-* `$blocss-use-push` - enables/disables push generation, defaults to `false`
-* `$blocss-use-pull` - enables/disables pull generation, defaults to `false`
-* `$blocss-divisions` - create several proportional divisions as read above, defaults to `12` for twelve colums
-* `$blocss-breakpoint-has-units` - Defines which namespaced breakpoints you would like to generate units, defaults to `()`
-* `$blocss-breakpoint-has-push` - Defines which namespaced breakpoints you would like to generate push, defaults to `()`
-* `$blocss-breakpoint-has-pull` - Defines which namespaced breakpoints you would like to generate pull, defaults to `()`
-* `$blocss-name-units` - the name prefix of units, defaults to `u`
-* `$blocss-name-push` - the name prefix of push, defaults to `push`
-* `$blocss-name-pull` - the name prefix of pull, defaults to `pull`
+* `$blocss-dimensions-use-units` - enables/disables unit generation, defaults to `true`
+* `$blocss-dimensions-use-push` - enables/disables push generation, defaults to `false`
+* `$blocss-dimensions-use-pull` - enables/disables pull generation, defaults to `false`
+* `$blocss-dimensions-divisions` - create several proportional divisions as read above, defaults to `12` for twelve colums
+* `$blocss-dimensions-breakpoint-has-units` - Defines which namespaced breakpoints you would like to generate units, defaults to `()`
+* `$blocss-dimensions-breakpoint-has-push` - Defines which namespaced breakpoints you would like to generate push, defaults to `()`
+* `$blocss-dimensions-breakpoint-has-pull` - Defines which namespaced breakpoints you would like to generate pull, defaults to `()`
+* `$blocss-dimensions-name-units` - the name prefix of units, defaults to `unit`
+* `$blocss-dimensions-name-push` - the name prefix of push, defaults to `push`
+* `$blocss-dimensions-name-pull` - the name prefix of pull, defaults to `pull`
 
 ## Browser support
 
