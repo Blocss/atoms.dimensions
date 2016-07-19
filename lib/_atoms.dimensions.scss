@@ -135,11 +135,11 @@ $blocss-dimensions-name-pull: pull !default;
                         @if $blocss-use-flexbox == true {
                             flex-basis: auto !important; /* [1] */
                         }
-                        width: percentage($i / $n) !default;
+                        width: percentage($i / $n) !important;
                     } @else if $prefix == $blocss-dimensions-name-push {
-                        left: percentage($i / $n) !default;
+                        left: percentage($i / $n) !important;
                     } @else if $prefix == $blocss-dimensions-name-pull {
-                        right: percentage($i / $n) !default;
+                        right: percentage($i / $n) !important;
                     }
                 }
             }
