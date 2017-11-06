@@ -1,4 +1,6 @@
-# Blocss Dimensions – v1.2.1
+# Blocss Dimensions – v1.2.1 - Deprecated
+
+**This module has been moved to: ([https://github.com/Blocss/blocss](https://github.com/Blocss/blocss))**
 
 A [Blocss](https://github.com/Blocss/blocss/) collection of utility classes for low-level CSS dimensions.
 
